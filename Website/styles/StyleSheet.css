@@ -1,0 +1,17 @@
+﻿h2 
+{
+    padding: 3px;
+    border-top: solid 2px #000;
+    background: #225588;
+    color: #fff;
+}
+
+h2 a, h2 a:active, h2 a:visited
+{
+    color: #fff;
+}
+
+a:hover
+{
+    text-decoration: none;
+}

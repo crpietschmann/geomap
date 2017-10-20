@@ -1,0 +1,73 @@
+﻿<!doctype html />
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <title>&lt;geomap&gt; - Google Maps Demos</title>
+    <link href="styles/stylesheet.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.4.js"></script>
+
+    <!-- geomap core scripts-->
+    <script src="scripts/geomap.core.js"></script>
+
+    <!-- geomap Google Maps v3 Support -->
+    <script src="scripts/geomap.provider.google.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    
+    <!-- geomap default styles -->
+    <link href="styles/geomap.css" rel="stylesheet" type="text/css" />
+
+    <script>
+        $(function () {
+            // Once page has loaded, initialize all the <geomap> tags
+
+            // Globally set "default" Map Provider
+            //geomap.Providers.Default.provider = "google";
+
+            // Initialize All Maps
+            $('geomap').geomap();
+        });
+    </script>
+</head>
+<body>
+    <h1>&lt;geomap&gt; - Google Maps Demos</h1>
+
+    <h2>Default Map</h2>
+    <geomap></geomap>
+
+    <h2>Specify "google" as Provider</h2>
+    <geomap provider="google"></geomap>
+
+    <h2>Set Center Location</h2>
+    <geomap center="-47 78"></geomap>
+
+    <h2>Set Zoom Level</h2>
+    <geomap zoom="4"></geomap>
+
+    <h2>Pushpin, Polyline and Polygon</h2>
+    <geomap>
+        <pushpin location="60 -96">
+            <info title="Pin Title">Some content for this pushpin.<br />Including a link: <a href="http://geomap.codeplex.com">http://geomap.codeplex.com</a>.</info>
+        </pushpin>
+        <pushpin location="40 -96" icon="https://encrypted.google.com/images/chrome_48.gif"></pushpin>
+        <polyline>
+            <location>40 -96</location><!-- <location> elements can also be declared this way. -->
+            <location latitude="-40" longitude="-96"></location>
+        </polyline>
+        <polygon>
+            <location latitude="40" longitude="-76"></location>
+            <location latitude="-40" longitude="-76"></location>
+            <location latitude="0" longitude="0"></location>
+            <location latitude="40" longitude="-76"></location>
+        </polygon>
+        Map not loaded. You may need to enable JavaScript within this browser.
+    </geomap>
+
+    <h2>Specify "no script" content</h2>
+    <geomap>
+        This content <strong>will</strong> be displayed if JavaScript is disabled.
+    </geomap>
+
+    <h5>Copyright &copy 2011 Chris Pietschmann (<a href="http://pietschsoft.com">http://pietschsoft.com</a>)</h5>
+</body>
+</html>

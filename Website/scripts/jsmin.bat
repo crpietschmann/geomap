@@ -1,0 +1,3 @@
+jsmin <geomap.core.js >min\geomap.core.min.js "// geomap - http://geomap.codeplex.com - (c)2011 Chris Pietschmann"
+jsmin <geomap.provider.bing.js >min\geomap.provider.bing.min.js "// geomap.provider.bing - http://geomap.codeplex.com - (c)2011 Chris Pietschmann"
+jsmin <geomap.provider.google.js >min\geomap.provider.google.min.js "// geomap.provider.google - http://geomap.codeplex.com - (c)2011 Chris Pietschmann"
